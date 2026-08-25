@@ -1,10 +1,49 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowRight, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
+const words = [
+  "Building Scalable Systems",
+  "Developing High-Performance APIs",
+  "Crafting Full-Stack Applications",
+  "Engineering Data Pipelines",
+];
+
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+
+  const typingSpeed = 90;
+  const deletingSpeed = 45;
+  const pauseTime = 2200;
+
+  useEffect(() => {
+    const currentWord = words[index];
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setText(currentWord.substring(0, subIndex + 1));
+        setSubIndex((prev) => prev + 1);
+        if (subIndex + 1 === currentWord.length) {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        }
+      } else {
+        setText(currentWord.substring(0, subIndex - 1));
+        setSubIndex((prev) => prev - 1);
+        if (subIndex - 1 === 0) {
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, isDeleting ? deletingSpeed : typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, isDeleting, index]);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#FAF9F6] dark:bg-[#121212]">
       {/* Subtle editorial background texture */}
@@ -23,14 +62,18 @@ export default function Hero() {
           <span>Available for Full-Stack & Backend Opportunities</span>
         </motion.div>
 
-        {/* Editorial Serif Headline */}
+        {/* Editorial Serif Headline with Typewriter */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-6xl lg:text-7xl font-serif font-normal tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7] mb-6 leading-[1.15]"
+          className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7] mb-6 leading-[1.2] min-h-[3.2em] sm:min-h-[2.4em] flex flex-col items-center justify-center"
         >
-          Building Software That <span className="italic text-[#C2410C] dark:text-[#EA580C]">Ships.</span>
+          <span className="mb-2">Full-Stack Excellence:</span>
+          <span>
+            <span className="italic text-[#C2410C] dark:text-[#EA580C]">{text}</span>
+            <span className="animate-pulse ml-0.5 text-[#C2410C] dark:text-[#EA580C] font-mono font-normal">|</span>
+          </span>
         </motion.h1>
 
         {/* Subtext Paragraph */}
