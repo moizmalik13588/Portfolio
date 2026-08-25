@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-fraunces), serif;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #FAF9F6;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #6B6B6B;
+    --accent: #C2410C;
+    --accent-hover: #9A3412;
+    --border: #E5E2DC;
+    --card-bg: #FFFFFF;
+  }
+
+  .dark {
+    --bg-primary: #121212;
+    --bg-secondary: #18181B;
+    --text-primary: #E4E4E7;
+    --text-secondary: #A1A1AA;
+    --accent: #EA580C;
+    --accent-hover: #C2410C;
+    --border: #27272A;
+    --card-bg: #18181B;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
