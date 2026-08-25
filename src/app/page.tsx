@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import DynamicTitle from "@/components/DynamicTitle";
 import Hero from "@/sections/Hero";
 import WhatIBring from "@/sections/WhatIBring";
 import About from "@/sections/About";
@@ -11,7 +12,8 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0A0E14] dark:bg-[#0A0E14] light:bg-[#F8FAFC] text-[#F3F4F6] dark:text-[#F3F4F6] light:text-[#111827] font-sans selection:bg-[#0EA5E9] selection:text-white transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-[#FAF9F6] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#E4E4E7] font-sans selection:bg-[#C2410C] selection:text-white transition-colors duration-300">
+      <DynamicTitle />
       <Navbar />
       <main className="flex-grow">
         <Hero />

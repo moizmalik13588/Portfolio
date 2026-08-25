@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   description: "Portfolio of Muhammad Moiz, Full-Stack Developer, Backend Engineer, and AI Integration specialist based in Karachi. Building production-grade web apps.",
   keywords: ["Full-Stack Developer", "Backend Engineer", "AI Integration", "React", "Node.js", "Next.js", "Karachi", "Muhammad Moiz"],
   authors: [{ name: "Muhammad Moiz" }],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   openGraph: {
     title: "Muhammad Moiz — Full-Stack Developer & Backend Engineer",
     description: "Building production-grade web apps — deployed, documented, and used in the real world.",
