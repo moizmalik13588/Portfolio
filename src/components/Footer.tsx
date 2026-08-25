@@ -70,7 +70,7 @@ export default function Footer() {
                 <span>MM</span>
               )}
             </div>
-            <span className="font-serif italic font-medium">Muhammad Moiz</span>
+            <span className="font-bold text-base tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7]">Muhammad Moiz</span>
           </a>
           <p className="text-sm text-[#6B6B6B] dark:text-[#A1A1AA] max-w-sm leading-relaxed">
             Full-Stack Developer & Backend Engineer building production-grade web apps and scalable systems.

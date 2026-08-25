@@ -51,7 +51,7 @@ export default function Navbar() {
               className="object-cover"
             />
           </div>
-          <span className="font-serif italic font-medium text-base">Muhammad Moiz</span>
+          <span className="font-bold text-base tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7]">Muhammad Moiz</span>
         </a>
 
         {/* Desktop Nav */}
