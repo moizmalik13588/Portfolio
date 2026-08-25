@@ -8,6 +8,7 @@ import Projects from "@/sections/Projects";
 import Experience from "@/sections/Experience";
 import Education from "@/sections/Education";
 import FinalCTA from "@/sections/FinalCTA";
+import Contact from "@/sections/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <Experience />
         <Education />
         <FinalCTA />
+        <Contact />
       </main>
       <Footer />
     </div>
