@@ -43,12 +43,12 @@ export default function Navbar() {
           href="#"
           className="text-lg font-bold tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7] flex items-center gap-2.5 group"
         >
-          <div className="relative w-9 h-9 rounded-full overflow-hidden shadow-xs border border-[#E5E2DC] dark:border-[#27272A]">
+          <div className="relative w-8 h-8">
             <Image
-              src="/moiz-dp.jpg"
+              src="/moiz-dp.png"
               alt="Muhammad Moiz"
               fill
-              className="object-cover"
+              className="w-8 h-8 object-contain"
             />
           </div>
           <span className="font-bold text-base tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7]">Muhammad Moiz</span>

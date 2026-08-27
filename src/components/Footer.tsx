@@ -57,13 +57,13 @@ export default function Footer() {
         {/* Left: Brand, Tagline & Socials */}
         <div className="md:col-span-6 flex flex-col items-start space-y-4">
           <a href="#" className="text-lg font-bold text-[#1A1A1A] dark:text-[#E4E4E7] flex items-center gap-2.5">
-            <div className="relative w-8 h-8 rounded-full overflow-hidden shadow-xs border border-[#E5E2DC] dark:border-[#27272A] flex items-center justify-center bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] font-mono text-xs font-semibold">
+            <div className="relative w-10 h-10">
               {!imageError ? (
                 <Image
-                  src="/moiz-dp.jpg"
+                  src="/moiz-dp.png"
                   alt="Muhammad Moiz"
                   fill
-                  className="object-cover"
+                  className="w-10 h-10 object-contain"
                   onError={() => setImageError(true)}
                 />
               ) : (

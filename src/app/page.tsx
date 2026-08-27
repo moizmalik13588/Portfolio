@@ -7,7 +7,6 @@ import TechStack from "@/sections/TechStack";
 import Projects from "@/sections/Projects";
 import Experience from "@/sections/Experience";
 import Education from "@/sections/Education";
-import FinalCTA from "@/sections/FinalCTA";
 import Contact from "@/sections/Contact";
 import Footer from "@/components/Footer";
 
@@ -24,7 +23,6 @@ export default function Home() {
         <Projects />
         <Experience />
         <Education />
-        <FinalCTA />
         <Contact />
       </main>
       <Footer />

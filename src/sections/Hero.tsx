@@ -56,7 +56,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#18181B] border border-[#E5E2DC] dark:border-[#27272A] text-xs font-mono text-[#6B6B6B] dark:text-[#A1A1AA] mb-8 shadow-xs"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#18181B] border border-[#E5E2DC] dark:border-[#27272A] text-xs font-mono text-[#71717A] dark:text-[#A1A1AA] tracking-wide mb-8 shadow-xs"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span>Available for Full-Stack & Backend Opportunities</span>
@@ -67,11 +67,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#1A1A1A] dark:text-[#E4E4E7] mb-6 leading-[1.2] min-h-[3.2em] sm:min-h-[2.4em] flex flex-col items-center justify-center"
+          className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight leading-tight text-[#1A1A1A] dark:text-[#E4E4E7] mb-6 min-h-[3.2em] sm:min-h-[2.4em] flex flex-col items-center justify-center"
         >
           <span className="mb-2">Full-Stack Excellence:</span>
           <span>
-            <span className="italic text-[#C2410C] dark:text-[#EA580C]">{text}</span>
+            <span className="font-serif font-normal italic text-[#C2410C] dark:text-[#EA580C]">{text}</span>
             <span className="animate-pulse ml-0.5 text-[#C2410C] dark:text-[#EA580C] font-mono font-normal">|</span>
           </span>
         </motion.h1>
@@ -119,16 +119,16 @@ export default function Hero() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto p-6 rounded-2xl bg-white dark:bg-[#18181B] border border-[#E5E2DC] dark:border-[#27272A] shadow-xl"
         >
           <div className="text-center md:border-r border-[#E5E2DC] dark:border-[#27272A] last:border-none pb-4 md:pb-0">
-            <div className="text-3xl font-serif font-bold text-[#C2410C] dark:text-[#EA580C]">4+</div>
-            <div className="text-xs font-mono text-[#6B6B6B] dark:text-[#A1A1AA] mt-1">Production Projects Shipped</div>
+            <div className="text-3xl font-serif font-normal text-[#C2410C] dark:text-[#EA580C]">4+</div>
+            <div className="text-xs font-mono text-[#71717A] dark:text-[#A1A1AA] tracking-wide mt-1">Production Projects Shipped</div>
           </div>
           <div className="text-center md:border-r border-[#E5E2DC] dark:border-[#27272A] last:border-none pb-4 md:pb-0">
-            <div className="text-3xl font-serif font-bold text-[#1A1A1A] dark:text-[#E4E4E7]">92.2%</div>
-            <div className="text-xs font-mono text-[#6B6B6B] dark:text-[#A1A1AA] mt-1">HEC NCST Percentile (Top ~8%)</div>
+            <div className="text-3xl font-serif font-normal text-[#1A1A1A] dark:text-[#E4E4E7]">92.2%</div>
+            <div className="text-xs font-mono text-[#71717A] dark:text-[#A1A1AA] tracking-wide mt-1">HEC NCST Percentile (Top ~8%)</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-serif font-bold text-[#C2410C] dark:text-[#EA580C]">6mo</div>
-            <div className="text-xs font-mono text-[#6B6B6B] dark:text-[#A1A1AA] mt-1">Backend Engineering Internship</div>
+            <div className="text-3xl font-serif font-normal text-[#C2410C] dark:text-[#EA580C]">6mo</div>
+            <div className="text-xs font-mono text-[#71717A] dark:text-[#A1A1AA] tracking-wide mt-1">Backend Engineering Internship</div>
           </div>
         </motion.div>
       </div>
