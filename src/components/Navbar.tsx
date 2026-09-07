@@ -33,7 +33,7 @@ export default function Navbar() {
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "mailto:moizmalik13588@gmail.com?subject=Let's%20Connect&body=Hi%20Muhammad%2C" },
   ];
 
   return (

@@ -17,7 +17,7 @@ export default function Footer() {
 
   const resourceLinks = [
     { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "mailto:moizmalik13588@gmail.com?subject=Let's%20Connect&body=Hi%20Muhammad%2C" },
     { name: "Resume", href: "/resume.pdf", external: true },
   ];
 
@@ -76,7 +76,7 @@ export default function Footer() {
             Full-Stack Developer & Backend Engineer building production-grade web apps and scalable systems.
           </p>
           <a
-            href="mailto:moizmalik13588@gmail.com"
+            href="mailto:moizmalik13588@gmail.com?subject=Let's%20Connect&body=Hi%20Muhammad%2C"
             className="text-xs font-mono text-[#C2410C] dark:text-[#EA580C] hover:underline flex items-center gap-1.5"
           >
             <Mail className="w-3.5 h-3.5" />
