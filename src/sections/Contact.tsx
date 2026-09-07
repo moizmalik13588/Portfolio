@@ -30,7 +30,7 @@ export default function Contact() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="mailto:moizmalik13588@gmail.com?subject=Let's%20Connect&body=Hi%20Muhammad%2C"
+            href="mailto:moizm12348@gmail.com?subject=Let's%20Connect&body=Hi%20Muhammad%2C"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] text-sm font-sans font-medium transition-all hover:bg-[#C2410C] dark:hover:bg-[#EA580C] group shadow-none"
           >
             <Mail className="w-4 h-4" />

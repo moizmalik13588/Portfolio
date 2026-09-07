@@ -54,7 +54,7 @@ export default function About() {
               View Resume
             </a>
             <a
-              href="mailto:moizmalik13588@gmail.com"
+              href="mailto:moizm12348@gmail.com?subject=Let's%20Connect&body=Hi%20Muhammad%2C"
               className="rounded-full border border-[#E5E2DC] dark:border-[#27272A] bg-white dark:bg-[#18181B] px-5 py-2 text-xs font-medium text-[#1A1A1A] dark:text-[#E4E4E7] hover:bg-[#F5F3EF] dark:hover:bg-zinc-800 shadow-none transition-colors inline-flex items-center gap-2"
             >
               <Mail className="w-3.5 h-3.5 text-[#C2410C]" />
