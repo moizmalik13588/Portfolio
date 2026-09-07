@@ -66,6 +66,23 @@ export default function Projects() {
       githubUrl: "https://github.com/moizmalik13588/dev-hire",
       badge: "AI & Backend",
     },
+    {
+      title: "LinguaLead",
+      tagline: "Bilingual AI Voice Sales Agent + CRM Automation",
+      description:
+        "Production-grade bilingual AI voice sales agent and CRM automation platform featuring live voice lead qualification, secure webhook verification, and automated pipeline scheduling.",
+      tech: ["FastAPI", "PostgreSQL", "SQLAlchemy", "Vapi.ai", "Groq LLM", "React 19", "Vite", "Tailwind CSS"],
+      highlights: [
+        "Bilingual (Urdu/English) AI voice agent (Vapi.ai) that qualifies sales leads live on the phone and syncs them to a CRM dashboard in real time",
+        "Groq LLM extracts structured lead data (interest, budget, timeline) validated against Pydantic schemas before it touches the database",
+        "Production-minded AI safety guardrails: treats call transcripts as untrusted input, cryptographic webhook signature verification, and idempotency checks to prevent duplicate processing",
+        "Auto-classifies leads as Hot/Warm/Cold with automated follow-up scheduling; includes a live AI Voice Demo Simulator to test the full call-to-CRM pipeline without a real phone call",
+      ],
+      liveUrl: "https://lingualead.vercel.app/",
+      apiDocsUrl: "https://stellar-motivation-production-f6af.up.railway.app/docs",
+      githubUrl: "https://github.com/moizmalik13588/Lingualead",
+      badge: "AI Voice & CRM",
+    },
   ];
 
   return (
@@ -84,15 +101,19 @@ export default function Projects() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="p-7 rounded-2xl bg-[#F5F3EF] dark:bg-[#18181B] border border-[#E5E2DC] dark:border-[#27272A] hover:border-[#C2410C]/50 transition-all shadow-none flex flex-col justify-between group"
-            >
+          {projects.map((project, idx) => {
+            const isLastOdd = projects.length % 2 !== 0 && idx === projects.length - 1;
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className={`p-7 rounded-2xl bg-[#F5F3EF] dark:bg-[#18181B] border border-[#E5E2DC] dark:border-[#27272A] hover:border-[#C2410C]/50 transition-all shadow-none flex flex-col justify-between group ${
+                  isLastOdd ? "lg:col-span-2 lg:max-w-2xl lg:mx-auto w-full" : ""
+                }`}
+              >
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2.5">
@@ -137,21 +158,32 @@ export default function Projects() {
               </div>
 
               {/* Links */}
-              <div className="flex items-center gap-4 pt-4 border-t border-[#E5E2DC] dark:border-[#27272A]">
+              <div className="flex items-center gap-3 pt-4 border-t border-[#E5E2DC] dark:border-[#27272A]">
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] text-sm font-sans font-medium transition-colors shadow-none hover:bg-[#C2410C] dark:hover:bg-[#EA580C]"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-3 rounded-full bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] text-xs sm:text-sm font-sans font-medium transition-colors shadow-none hover:bg-[#C2410C] dark:hover:bg-[#EA580C]"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Live Demo
                 </a>
+                {project.apiDocsUrl && (
+                  <a
+                    href={project.apiDocsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-3 rounded-full bg-white dark:bg-[#121212] hover:bg-[#F5F3EF] dark:hover:bg-zinc-800 border border-[#E5E2DC] dark:border-[#27272A] text-[#1A1A1A] dark:text-[#E4E4E7] text-xs sm:text-sm font-sans font-medium transition-colors shadow-none"
+                  >
+                    <ExternalLink className="w-4 h-4 text-[#C2410C]" />
+                    API Docs
+                  </a>
+                )}
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white dark:bg-[#121212] hover:bg-[#F5F3EF] dark:hover:bg-zinc-800 border border-[#E5E2DC] dark:border-[#27272A] text-[#1A1A1A] dark:text-[#E4E4E7] text-sm font-sans font-medium transition-colors shadow-none"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-3 rounded-full bg-white dark:bg-[#121212] hover:bg-[#F5F3EF] dark:hover:bg-zinc-800 border border-[#E5E2DC] dark:border-[#27272A] text-[#1A1A1A] dark:text-[#E4E4E7] text-xs sm:text-sm font-sans font-medium transition-colors shadow-none"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
@@ -160,7 +192,8 @@ export default function Projects() {
                 </a>
               </div>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>
